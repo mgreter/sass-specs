@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,CAAE,CACA,KAAK,CAAE,OAAgB,CACvB,KAAK,CAAE,cAAc,CACrB,KAAK,CAAE,cAAoB,CAC3B,KAAK,CAAE,OAAW,CAClB,KAAK,CAAE,MAAS,CAChB,KAAK,CAAE,QAAsB,CAC7B,KAAK,CAAE,OAAoB,CAC3B,KAAK,CAAU,KAAK",
+"sources": ["input.scss"],
+"names": [],
+"file": "expected.compressed.css"
+}
