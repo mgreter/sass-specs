@@ -1,0 +1,7 @@
+.interpolation-test {
+  color: "a 'red' and \"blue\" value";
+  test: '{"foo": "bar"}';
+  test: '{"foo": "bar"}';
+  qwe: '1"';
+  qwe: "\"";
+}

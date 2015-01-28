@@ -1,0 +1,72 @@
+/*
+Error: Invalid CSS after "	fail: #{"#{": expected expression (e.g. 1px, bold), was "#{'\"b\\\\a\or\..."
+        on line 4 of t/sass-specs/suite//parser/escaping/interpolate-2/input.scss
+
+1: foo {
+2: 	fail: '\"b\\\\a\or\"';
+3: 	fail: #{\"b\\\\a\or\"};
+4: 	fail: #{"#{#{'\"b\\\\a\or\"'}}"};
+5: 	fail: #{"#{#{"#{'\"b\\\\a\or\"'}"}}"};
+6: 	fail: "#{"#{#{'\"b\\\\a\or\"'}}"}";
+7: 	fail: "#{"#{#{"#{'\"b\\\\a\or\"'}"}}"}";
+8: }
+
+Backtrace:
+t/sass-specs/suite//parser/escaping/interpolate-2/input.scss:4
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:1167:in `expected'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/script/lexer.rb:220:in `expected!'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/script/parser.rb:573:in `assert_expr'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/script/parser.rb:533:in `string'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/script/parser.rb:524:in `variable'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/script/parser.rb:509:in `paren'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/script/parser.rb:498:in `special_fun'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/script/parser.rb:492:in `raw'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/script/parser.rb:406:in `funcall'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/script/parser.rb:387:in `ident'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/script/parser.rb:246:in `unary_not'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/script/parser.rb:246:in `unary_div'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/script/parser.rb:246:in `unary_minus'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/script/parser.rb:246:in `unary_plus'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/script/parser.rb:227:in `times_div_or_mod'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/script/parser.rb:227:in `plus_or_minus'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/script/parser.rb:227:in `relational'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/script/parser.rb:227:in `eq_or_neq'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/script/parser.rb:227:in `and_expr'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/script/parser.rb:227:in `or_expr'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/script/parser.rb:361:in `space'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/script/parser.rb:345:in `interpolation'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/script/parser.rb:293:in `expr'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/script/parser.rb:571:in `assert_expr'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/script/parser.rb:349:in `interpolation'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/script/parser.rb:293:in `expr'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/script/parser.rb:571:in `assert_expr'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/script/parser.rb:62:in `parse'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:1027:in `sass_script'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:880:in `value!'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:753:in `block in try_declaration'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:1141:in `call'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:1141:in `rethrow'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:766:in `try_declaration'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:696:in `declaration_or_ruleset'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:661:in `block_child'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:653:in `block_contents'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:642:in `block'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:636:in `ruleset'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:660:in `block_child'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:650:in `block_contents'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:117:in `stylesheet'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:42:in `parse'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/engine.rb:393:in `_to_tree'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/engine.rb:268:in `render'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:404:in `run'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:62:in `process_result'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/exec/base.rb:52:in `parse'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/lib/sass/exec/base.rb:19:in `parse!'
+C:/Ruby/193/lib/ruby/gems/1.9.1/gems/sass-3.4.9/bin/sass:13:in `<top (required)>'
+C:/ruby/193/bin/sass:23:in `load'
+C:/ruby/193/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"	fail: #{\"#{\": expected expression (e.g. 1px, bold), was \"#{'\\"b\\\\a\or\...\"\A         on line 4 of t/sass-specs/suite//parser/escaping/interpolate-2/input.scss\A \A 1: foo {\A 2: 	fail: '\\"b\\\\a\or\\"';\A 3: 	fail: #{\\"b\\\\a\or\\"};\A 4: 	fail: #{\"#{#{'\\"b\\\\a\or\\"'}}\"};\A 5: 	fail: #{\"#{#{\"#{'\\"b\\\\a\or\\"'}\"}}\"};\A 6: 	fail: \"#{\"#{#{'\\"b\\\\a\or\\"'}}\"}\";\A 7: 	fail: \"#{\"#{#{\"#{'\\"b\\\\a\or\\"'}\"}}\"}\";\A 8: }"; }
