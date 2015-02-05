@@ -11,6 +11,7 @@ my @input = (
 	['05_comma_list_quoted', qq("alpha", 'beta')],
 	['06_space_list_complex', qq(gamme "'"delta"'")],
 	['07_comma_list_complex', qq(gamma, "'"delta"'")],
+	['08_escaped_backslash', qq(\\\\)],
 );
 
 my @template;
