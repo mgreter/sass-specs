@@ -1,0 +1,9 @@
+$input: l\\i	e\ral;
+.result {
+  output: $input;
+  output: #{$input};
+  output: "[#{$input}]";
+  output: "#{$input}";
+  output: '#{$input}';
+  output: "['#{$input}']";
+}

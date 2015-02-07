@@ -11,7 +11,10 @@ my @input = (
 	['05_comma_list_quoted', qq("alpha", 'beta')],
 	['06_space_list_complex', qq(gamme "'"delta"'")],
 	['07_comma_list_complex', qq(gamma, "'"delta"'")],
-	['08_escaped_backslash', qq(\\\\)],
+	['10_escaped_backslash', qq(\\\\)],
+	['11_escaped_literal', qq(l\\\\ite\\ral)],
+	['12_escaped_double_quoted', qq("l\\\\ite\\ral")],
+	['13_escaped_single_quoted', qq('l\\\\ite\\ral')],
 );
 
 my @template;
@@ -79,6 +82,7 @@ push @template, << "EOF";
   squoted: '#{"#{\$input}"}';
   squoted: '#{'#{\$input}'}';
   squoted: '#{"['#{\$input}']"}';
+}
 EOF
 # ruby sass cannot handle these cases ...
 pop(@template); pop(@template);
@@ -105,4 +109,4 @@ while (defined(my $name = shift @template)) {
 	}
 }
 
-<>;
+# <>;
