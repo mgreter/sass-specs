@@ -3,6 +3,8 @@ use warnings;
 
 use File::chdir;
 
+
+
 my @input = (
 	['01_literal', qq(literal)],
 	['02_double_quoted', qq("dquoted")],
@@ -16,9 +18,23 @@ my @input = (
 	['12_escaped_double_quoted', qq("l\\\\ite\\ral")],
 	['13_escaped_single_quoted', qq('l\\\\ite\\ral')],
 
-	['20_escaped_literal_quotes', qq(\\\"\\\')],
-	['21_escaped_double_quotes', qq("\\\"")],
-	['22_escaped_single_quotes', qq('\\\'')],
+	['14_escapes_literal_numbers', qq(\\1\\2\\3\\4\\5\\6\\7\\8\\9)],
+	['15_escapes_double_quoted_numbers', qq("\\1\\2\\3\\4\\5\\6\\7\\8\\9")],
+	['16_escapes_single_quoted_numbers', qq('\\1\\2\\3\\4\\5\\6\\7\\8\\9')],
+	['17_escapes_literal_lowercase', qq(\\b\\c\\d\\e\\f\\g\\h\\i\\j\\k\\l\\m\\n\\o\\p\\q\\r\\s\\t\\u\\v\\w\\x\\y\\z)],
+	['18_escapes_double_quoted_lowercase', qq("\\b\\c\\d\\e\\f\\g\\h\\i\\j\\k\\l\\m\\n\\o\\p\\q\\r\\s\\t\\u\\v\\w\\x\\y\\z")],
+	['19_escapes_single_quoted_lowercase', qq('\\b\\c\\d\\e\\f\\g\\h\\i\\j\\k\\l\\m\\n\\o\\p\\q\\r\\s\\t\\u\\v\\w\\x\\y\\z')],
+	['20_escapes_literal_uppercase', qq(\\B\\C\\D\\E\\F\\G\\H\\I\\J\\K\\L\\M\\N\\O\\P\\Q\\R\\S\\T\\U\\V\\W\\X\\Y\\Z)],
+	['21_escapes_double_quoted_uppercase', qq("\\B\\C\\D\\E\\F\\G\\H\\I\\J\\K\\L\\M\\N\\O\\P\\Q\\R\\S\\T\\U\\V\\W\\X\\Y\\Z")],
+	['22_escapes_single_quoted_uppercase', qq('\\B\\C\\D\\E\\F\\G\\H\\I\\J\\K\\L\\M\\N\\O\\P\\Q\\R\\S\\T\\U\\V\\W\\X\\Y\\Z')],
+
+	['23_escapes_literal_specials', qq(\\0_\\a_\\A)],
+	['24_escapes_double_quoted_specials', qq("\\0_\\a_\\A")],
+	['25_escapes_single_quoted_specials', qq('\\0_\\a_\\A')],
+
+	['26_escaped_literal_quotes', qq(\\\"\\\')],
+	['27_escaped_double_quotes', qq("\\\"")],
+	['28_escaped_single_quotes', qq('\\\'')],
 );
 
 my @template;
