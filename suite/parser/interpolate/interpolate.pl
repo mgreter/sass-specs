@@ -15,6 +15,10 @@ my @input = (
 	['11_escaped_literal', qq(l\\\\ite\\ral)],
 	['12_escaped_double_quoted', qq("l\\\\ite\\ral")],
 	['13_escaped_single_quoted', qq('l\\\\ite\\ral')],
+
+	['20_escaped_literal_quotes', qq(\\\"\\\')],
+	['21_escaped_double_quotes', qq("\\\"")],
+	['22_escaped_single_quotes', qq('\\\'')],
 );
 
 my @template;
